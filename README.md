@@ -1,1 +1,11 @@
-# Captone-1
+// Cách clone về máy
+- Tạo thư mục mới
+- git clone https://github.com/tranquangdung-3007/Captone-1
+- cd Captone-1
+- git fetch
+- Mở Visual Studio Code
+- Open folder
+- Chọn folder Captone-1
+- Open New Terminal
+- npm start
+- Lên website search: localhost:3000

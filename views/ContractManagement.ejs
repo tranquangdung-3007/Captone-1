@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,500,0,0" />
+    <link rel="stylesheet" href="/css/managerContract.css">
+    <title>NHÀ TRỌ CỦA TÔI</title>
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="/image/logo.png" alt="">
+                    <h2>i<span class="danger">HOME</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/">
+                    <span class="material-symbols-sharp">
+                        grid_view
+                    </span>
+                    <h3>Trang chủ</h3>
+                </a>
+                <a href="/HouseManagement">
+                    <span class="material-symbols-sharp">
+                        home
+                    </span>
+                    <h3>Quản lý nhà</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        bed
+                    </span>
+                    <h3>Quản lý phòng</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        person_outline
+                    </span>
+                    <h3>Quản lý người thuê</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        gavel
+                    </span>
+                    <h3>Quản lý hợp đồng</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        room_service
+                    </span>
+                    <h3>Quản lý dịch vụ</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        electric_bolt
+                    </span>
+                    <h3>Chỉ số điện</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        invert_colors
+                    </span>
+                    <h3>Chỉ số nước</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        receipt_long
+                    </span>
+                    <h3>Hóa đơn</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        dangerous
+                    </span>
+                    <h3>Báo cáo sự cố</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        devices
+                    </span>
+                    <h3>Tài sản</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        logout
+                    </span>
+                    <h3>Đăng xuất</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <h1>Quản lý hợp đồng</h1>
+
+            <div class="date">
+                <input type="date">
+            </div>
+
+            <div class="recent-orders">
+                <h2>Danh sách hợp đồng</h2>
+                <div class="top-recent">
+                   
+                    <a href="/ContractManagement/addcontract">
+                        <button class="btn-addhouse">
+                            Thêm hợp đồng
+                        </button>
+                    </a>
+                </div>
+                <table>
+                    <thead>
+                        <th>ID hợp đồng</th>
+                        <th>Ngày lập</th>
+                        <th>Ngày kết thúc</th>
+                        <th>Tiền cọc</th>
+                        <th>Ghi chú</th>
+                        <th>Hành vi</th>
+                        <th>Hành vi</th>
+                    </thead>
+                    <tbody>
+                      
+                            <tr>
+
+                                <td>
+                                   001
+                                </td>
+                                <td>
+                                  2/10/2020
+                                </td>
+                                <td>2/10/2023</td>
+                                <td>
+                                   500.000 vnd
+                                </td>
+                                <td>
+                                    Không
+                                </td>
+                                
+                                <td>
+                                    <a href="#" class="primary">
+                                        Sửa
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#" class="danger">
+                                        Xóa
+                                    </a>
+                                </td>
+                            </tr>
+                            
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-symbols-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-symbols-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-symbols-sharp">
+                        dark_mode
+                    </span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Xin chào, <b>Phát</b></p>
+                        <small class="text-muted">User</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="/image/profile-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-updates">
+                <h2>Thông báo</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="/image/profile-2.jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Quang Dũng</b> đã thông báo cho bạn một sự cố!!!</p>
+                            <small class="text-muted">2 Phút trước</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="/image/profile-3.jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Hương Giang</b> đã thông báo cho bạn một sự cố!!!</p>
+                            <small class="text-muted">10 Phút trước</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="/image/profile-4.jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Đắc Trung</b> đã thông báo cho bạn một sự cố!!!</p>
+                            <small class="text-muted">14 Phút trước</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sales-analytics">
+                <h2>Phân tích</h2>
+                <div class="item online">
+                    <div class="icon">
+                        <span class="material-symbols-sharp">
+                            payments
+                        </span>
+                    </div>
+                    <div class="data">
+                        <div class="info">
+                            <h3>Tổng doanh thu so với năm trước</h3>
+                            <small class="text-muted">24 giờ qua</small>
+                        </div>
+                        <h2 class="success">+39%</h2>
+
+                    </div>
+                </div>
+                <div class="item offline">
+                    <div class="icon">
+                        <span class="material-symbols-sharp">
+                            meeting_room
+                        </span>
+                    </div>
+                    <div class="data">
+                        <div class="info">
+                            <h3>Tổng số lượng phòng thuê so với năm trước</h3>
+                            <small class="text-muted">24 giờ qua</small>
+                        </div>
+                        <h2 class="danger">-10%</h2>
+                    </div>
+                </div>
+                <div class="item customer">
+                    <div class="icon">
+                        <span class="material-symbols-sharp">
+                            person
+                        </span>
+                    </div>
+                    <div class="data">
+                        <div class="info">
+                            <h3>Khách thuê mới</h3>
+                            <small class="text-muted">24 giờ qua</small>
+                        </div>
+                        <h2 class="success">0%</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

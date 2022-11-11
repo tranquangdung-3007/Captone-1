@@ -40,13 +40,13 @@
                     </span>
                     <h3>Quản lý nhà</h3>
                 </a>
-                <a href="#">
+                <a href="/RoomManagement">
                     <span class="material-symbols-sharp">
                         bed
                     </span>
                     <h3>Quản lý phòng</h3>
                 </a>
-                <a href="#">
+                <a href="/TenantsManagement">
                     <span class="material-symbols-sharp">
                         person_outline
                     </span>
@@ -104,47 +104,42 @@
         </aside>
 
         <main>
-            <h1>Thêm phòng mới</h1>
+            <h1>Quản lý phòng</h1>
             <div class="date">
                 <input type="date">
             </div>
-            <!-- <h2 class="title">Tạo nhà mới</h2> -->
             <div class="view-form">
                 <div class="recent-orders">
+                    <h2 class="title">Thêm phòng mới</h2>
                     <form method="POST" action="/RoomManagement/addRoom">
-
                         <div class="text-input">
                             <label>Tên nhà trọ</label>
-                            <select name="houseID">                                
+                            <select name="houseID">
                                 <% for(var i=0;i<nhatro.length;i++){%>
-                                <option value="<%=nhatro[i].idNhaTro%>"> 
-                                    <%=nhatro[i].TenNhaTro%> 
-                                </option>
-                                <% } %>
+                                    <option value="<%=nhatro[i].idNhaTro%>">
+                                        <%=nhatro[i].TenNhaTro%>
+                                    </option>
+                                    <% } %>
                             </select>
                         </div>
 
                         <div class="text-input">
-                            <input type="text" id="tenphong" name="tenphong" placeholder="Nhập số phòng trọ">
+                            <input type="text" id="tenphong" name="tenphong" placeholder="Nhập số phòng trọ" required>
                             <label for="Tenphong">Số phòng</label>
                         </div>
                         <div class="text-input">
-                            <input type="text" id="succhua" name="succhua" placeholder="Nhập sức chứa">
+                            <input type="text" id="succhua" name="succhua" placeholder="Nhập sức chứa" required>
                             <label for="Succhua">Sức chứa</label>
                         </div>
                         <div class="text-input">
-                            <input type="text" id="dientich" name="dientich" placeholder="Nhập diện tích phòng trọ">
+                            <input type="text" id="dientich" name="dientich" placeholder="Nhập diện tích phòng trọ"
+                                required>
                             <label for="Dientich">Diện tích</label>
                         </div>
                         <div class="text-input">
-                            <input type="number" id="gia" name="gia" placeholder="Nhập giá thuê phòng">
+                            <input type="number" id="gia" name="gia" placeholder="Nhập giá thuê phòng" required>
                             <label for="Gia">Giá</label>
                         </div>
-                        <div class="text-input">
-                            <input type="text" id="trangthai" name="trangthai" placeholder="Nhập trạng thái phòng">
-                            <label for="Trangthai">Trạng thái</label>
-                        </div>
-
                         <button type="submit">Tạo </button>
                     </form>
                 </div>

@@ -27,77 +27,81 @@
             </div>
 
             <div class="sidebar">
-                <a href="/">
+                <a href="/home" class="menu_item">
                     <span class="material-symbols-sharp">
                         grid_view
                     </span>
                     <h3>Trang chủ</h3>
                 </a>
-                <a href="/HouseManagement">
+                <a href="/HouseManagement" class="menu_item">
                     <span class="material-symbols-sharp">
                         home
                     </span>
                     <h3>Quản lý nhà</h3>
                 </a>
-                <a href="#">
+                <a href="/RoomManagement" class="menu_item">
                     <span class="material-symbols-sharp">
                         bed
                     </span>
                     <h3>Quản lý phòng</h3>
                 </a>
-                <a href="#">
+                <a href="/TenantsManagement" class="menu_item">
                     <span class="material-symbols-sharp">
                         person_outline
                     </span>
                     <h3>Quản lý người thuê</h3>
                 </a>
-                <a href="#">
+                <a href="#" class="menu_item">
                     <span class="material-symbols-sharp">
                         gavel
                     </span>
                     <h3>Quản lý hợp đồng</h3>
                 </a>
-                <a href="#">
+                <a href="#" class="menu_item">
                     <span class="material-symbols-sharp">
                         room_service
                     </span>
                     <h3>Quản lý dịch vụ</h3>
                 </a>
-                <a href="#">
+                <a href="#" class="menu_item">
                     <span class="material-symbols-sharp">
                         electric_bolt
                     </span>
                     <h3>Chỉ số điện</h3>
                 </a>
-                <a href="#">
+                <a href="#" class="menu_item">
                     <span class="material-symbols-sharp">
                         invert_colors
                     </span>
                     <h3>Chỉ số nước</h3>
                 </a>
-                <a href="#">
+                <a href="#" class="menu_item">
                     <span class="material-symbols-sharp">
                         receipt_long
                     </span>
                     <h3>Hóa đơn</h3>
                 </a>
-                <a href="#">
+                <a href="#" class="menu_item">
                     <span class="material-symbols-sharp">
                         dangerous
                     </span>
                     <h3>Báo cáo sự cố</h3>
                 </a>
-                <a href="#">
+                <a href="#" class="menu_item">
                     <span class="material-symbols-sharp">
                         devices
                     </span>
                     <h3>Tài sản</h3>
                 </a>
-                <a href="#">
-                    <span class="material-symbols-sharp">
-                        logout
-                    </span>
-                    <h3>Đăng xuất</h3>
+                <a href="">
+                    <form action="/logout" method="POST" class="btn-logout">
+                        <span class="material-symbols-sharp">
+                            logout
+                        </span>
+                        <button type="submit">
+                            <h3>Đăng xuất</h3>
+                        </button>
+                    </form>
                 </a>
             </div>
         </aside>
@@ -107,30 +111,38 @@
             <div class="date">
                 <input type="date">
             </div>
-            <h2 class="title">Tạo nhà mới</h2>
             <div class="view-form">
                 <div class="recent-orders">
+                    <h2 class="title">Thêm nhà</h2>
                     <form method="POST" action="/HouseManagement/addhome">
-                        <label for="">Tên nhà trọ</label>
-                        <input type="text" id="tennhatro" name="tennhatro" placeholder="Tên nhà trọ của bạn..."
+                        <div class="text-input">
+                            <input type="text" id="tennhatro" name="tennhatro" placeholder="Tên nhà trọ của bạn..."
                             required>
-                        <label for="">Thành Phố</label>
-                        <input type="text" id="thanhpho" name="thanhpho" placeholder="Thành phố..." required>
-
-                        <label for="">Quận</label>
-                        <input type="text" id="quan" name="quan" placeholder="Quận..." required>
-
-                        <label for="">Phường</label>
-                        <input type="text" id="phuong" name="phuong" placeholder="Phường..." required>
-
-                        <label for="">Địa chỉ</label>
-                        <input type="text" id="diachi" name="diachi" placeholder="Địa chỉ..." required>
-
+                            <label for="Tennhatro">Tên nhà trọ</label>
+                        </div>
+                        <div class="text-input">
+                            <input type="text" id="thanhpho" name="thanhpho" placeholder="Thành phố..." required>
+                            <label for="Thanhpho">Thành phố</label>
+                        </div>
+                        <div class="text-input">
+                            <input type="text" id="quan" name="quan" placeholder="Quận..." required>
+                            <label for="Quan">Quận</label>
+                        </div>
+                        <div class="text-input">
+                            <input type="text" id="phuong" name="phuong" placeholder="Phường..." required>
+                            <label for="Phuong">Phường</label>
+                        </div>
+                        <div class="text-input">
+                            <input type="text" id="diachi" name="diachi" placeholder="Địa chỉ..." required>
+                            <label for="Diachi">Địa chỉ</label>
+                        </div>
                         <button type="submit">Tạo </button>
+
                     </form>
                 </div>
             </div>
         </main>
+        
         <div class="right">
             <div class="top">
                 <button id="menu-btn">
@@ -200,7 +212,7 @@
                     </div>
                     <div class="data">
                         <div class="info">
-                            <h3>Tổng doanh thu so với năm trước</h3>
+                            <b>Tổng doanh thu so với năm trước</b>
                             <small class="text-muted">24 giờ qua</small>
                         </div>
                         <h2 class="success">+39%</h2>
@@ -215,7 +227,7 @@
                     </div>
                     <div class="data">
                         <div class="info">
-                            <h3>Tổng số lượng phòng thuê so với năm trước</h3>
+                            <b>Tổng số lượng phòng thuê so với năm trước</b>
                             <small class="text-muted">24 giờ qua</small>
                         </div>
                         <h2 class="danger">-10%</h2>
@@ -229,7 +241,7 @@
                     </div>
                     <div class="data">
                         <div class="info">
-                            <h3>Khách thuê mới</h3>
+                            <b>Khách thuê mới</b>
                             <small class="text-muted">24 giờ qua</small>
                         </div>
                         <h2 class="success">0%</h2>
@@ -238,6 +250,7 @@
             </div>
         </div>
     </div>
+    <script src="/js/dark-light.js"></script>
 </body>
 
 </html>

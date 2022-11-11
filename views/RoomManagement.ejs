@@ -40,13 +40,13 @@
                     </span>
                     <h3>Quản lý nhà</h3>
                 </a>
-                <a href="#">
+                <a href="/RoomManagement">
                     <span class="material-symbols-sharp">
                         bed
                     </span>
                     <h3>Quản lý phòng</h3>
                 </a>
-                <a href="#">
+                <a href="/TenantsManagement">
                     <span class="material-symbols-sharp">
                         person_outline
                     </span>
@@ -114,14 +114,14 @@
                 <h2>Danh sách phòng thuê</h2>
                 <div class="top-recent">
                     <form action="/RoomManagement" method="POST">
-                        <select name="houseID">                          
-                                <option value="allHouse">Chọn nhà</option>
-                            
+                        <select name="houseID">
+                            <option value="allHouse">Chọn nhà</option>
+
                             <% for(var i=0;i<nhatro.length;i++){%>
-                            <option value="<%=nhatro[i].idNhaTro%>"> 
-                                <%=nhatro[i].TenNhaTro%> 
-                            </option>
-                            <% } %>
+                                <option value="<%=nhatro[i].idNhaTro%>">
+                                    <%=nhatro[i].TenNhaTro%>
+                                </option>
+                                <% } %>
                         </select>
                         <button type="submit">Tìm</button>
                     </form>
@@ -152,17 +152,17 @@
                                     <%=phongtro[i].TrangThai%>
                                 </td>
                                 <td>
-                                    <a href="#" class="primary">
+                                    <a href="/RoomManagement/editroom/<%=phongtro[i].idPhongTro%>" class="primary">
                                         Sửa
                                     </a>
                                 </td>
                                 <td>
-                                    <a href="#" class="danger">
+                                    <a href="/RoomManagement/deleteroom/<%=phongtro[i].idPhongTro%>" class="danger">
                                         Xóa
                                     </a>
                                 </td>
                             </tr>
-                        <% } %>
+                            <% } %>
                     </tbody>
                 </table>
             </div>

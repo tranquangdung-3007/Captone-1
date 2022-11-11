@@ -267,19 +267,52 @@ main .view-form .recent-orders form .text-input {
   margin-bottom: 60px;
 }
 
-main .view-form .recent-orders form .text-input input,
-main .view-form .recent-orders form .text-input select {
+.container main .view-form .recent-orders form .selection-view-group{
+  display: flex;
+}
+
+.container main .view-form .recent-orders form .text-input input{
   display: inline-block;
-  width: 800px;
+  width: 760px;
   height: 40px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
   border: 1px solid lightgray;
   border-radius: 3px;
-  padding: 10px 10px 10px 150px;
+  padding: 10px 10px 10px 200px;
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
+}
+
+.container main .view-form .recent-orders form .selection-view-group .text-input input{
+  display: inline-block;
+  width: 370px;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding: 10px 10px 10px 200px;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  margin-right: 20px;
+}
+
+.container main .view-form .recent-orders form .selection-view-group .text-input select{
+  display: inline-block;
+  width: 370px;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding: 10px 10px 10px 200px;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  margin-right: 20px;
 }
 
 main .view-form .recent-orders form .text-input input:focus+label,

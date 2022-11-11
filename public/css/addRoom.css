@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Roboto:ital,wght@1,200&family=Exo:wght@400;500;600&family=Luxurious+Roman&family=Mulish:wght@200&family=Open+Sans:wght@300;400;500&family=Oswald:wght@200;300;400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@400;500&family=Roboto+Condensed:wght@300&family=Roboto:wght@100;300;400;500;700&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,600&family=Space+Grotesk:wght@400;500;700&display=swap");
+
 :root {
   --color-primary: #7380ec;
   --color-danger: #ff7782;
@@ -32,9 +33,9 @@ body {
   font-size: 1rem;
   background: var(--color-background);
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   overflow-x: hidden;
 }
 
@@ -77,6 +78,8 @@ h5 {
   font-size: 0.77rem;
 }
 
+
+
 small {
   font-size: 1rem;
 }
@@ -88,7 +91,7 @@ small {
   margin: 0 auto;
   gap: 1.8rem;
   -ms-grid-columns: 14rem auto 23rem;
-      grid-template-columns: 14rem auto 23rem;
+  grid-template-columns: 14rem auto 23rem;
 }
 
 .container aside {
@@ -100,11 +103,11 @@ small {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-top: 1.4rem;
 }
 
@@ -130,8 +133,8 @@ small {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   height: 86vh;
   position: relative;
   top: 3rem;
@@ -145,8 +148,8 @@ small {
   margin-left: 2rem;
   gap: 1rem;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
   height: 3.7rem;
   -webkit-transition: all 300ms ease;
@@ -196,22 +199,21 @@ small {
 
 .container main .view-form .recent-orders form {
   background-color: white;
-  padding: 60px;
+  padding: 40px;
   border-radius: 25px;
 }
 
 .container main .view-form .recent-orders form .text-input {
   position: relative;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
-.container main .view-form .recent-orders form .text-input input, 
-.container main .view-form .recent-orders form .text-input select {
+.container main .view-form .recent-orders form .text-input input,.container main .view-form .recent-orders form .text-input select {
   display: inline-block;
   width: 800px;
   height: 40px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   outline: none;
   border: 1px solid lightgray;
   border-radius: 3px;
@@ -220,10 +222,9 @@ small {
   transition: all 0.1s ease-out;
 }
 
-.container main .view-form .recent-orders form .text-input input:focus + label,
-.container main .view-form .recent-orders form .text-input select:focus + label  {
+.container main .view-form .recent-orders form .text-input input:focus+label,.container main .view-form .recent-orders form .text-input select:focus+label {
   -webkit-transform: translateY(-120%) translateX(0%);
-          transform: translateY(-120%) translateX(0%);
+  transform: translateY(-120%) translateX(0%);
   border-radius: 3px;
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
@@ -234,11 +235,11 @@ small {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 
 .container main .view-form .recent-orders form .text-input label {
-  width: 150px;
+  width: 120px;
   position: absolute;
   top: 0;
   left: 0;
@@ -248,13 +249,13 @@ small {
   color: white;
   border-radius: 3px 0 0 3px;
   padding: 0 20px;
-  background: #E03616;
+  background: #02674e;
   -webkit-transform: translateZ(0) translateX(0);
-          transform: translateZ(0) translateX(0);
+  transform: translateZ(0) translateX(0);
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
   -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 
 .container main .view-form .recent-orders form button {
@@ -266,6 +267,7 @@ small {
   font-weight: 600;
   background-color: #111e88;
   cursor: pointer;
+  float: right;
 }
 
 .container .right {
@@ -277,8 +279,8 @@ small {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -ms-flex-pack: end;
+  justify-content: end;
   gap: 2rem;
 }
 
@@ -293,11 +295,11 @@ small {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 1.6rem;
   width: 4.2rem;
   cursor: pointer;
@@ -312,11 +314,11 @@ small {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .container .right .top .theme-toggler .material-symbols-sharp .active {
@@ -363,14 +365,14 @@ small {
   padding: var(--card-padding);
   border-radius: var(--card-boder-radius);
   -webkit-box-shadow: var(--box-shadow);
-          box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
 
 .container .right .recent-updates .updates:hover {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
@@ -379,7 +381,7 @@ small {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 2.6rem auto;
-      grid-template-columns: 2.6rem auto;
+  grid-template-columns: 2.6rem auto;
   gap: 1rem;
   margin-bottom: 1rem;
 }
@@ -447,21 +449,21 @@ small {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 1rem;
   margin-bottom: 0.7rem;
   padding: 1.4rem var(--card-padding);
   border-radius: var(--boder-radius-3);
   -webkit-box-shadow: var(--box-shadow);
-          box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
 
 .container .right .sales-analytics .item:hover {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .container .right .sales-analytics .item .data {
@@ -469,12 +471,13 @@ small {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -ms-flex-align: start;
+  align-items: start;
   margin: 0;
   width: 100%;
 }
+
 /*# sourceMappingURL=AddHome.css.map */

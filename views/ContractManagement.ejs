@@ -113,7 +113,17 @@
             <div class="recent-orders">
                 <h2>Danh sách hợp đồng</h2>
                 <div class="top-recent">
-                   
+                    <form action="/ContractManagement" method="POST">
+                        <select name="houseID">                          
+                                <option value="allHouse">Chọn nhà</option>                           
+                            <% for(var i=0;i<nhatro.length;i++){%>
+                            <option value="<%=nhatro[i].idNhaTro%>"> 
+                                <%=nhatro[i].TenNhaTro%> 
+                            </option>
+                            <% } %>
+                        </select>
+                        <button type="submit">Tìm</button>
+                    </form>
                     <a href="/ContractManagement/addcontract">
                         <button class="btn-addhouse">
                             Thêm hợp đồng
@@ -122,30 +132,31 @@
                 </div>
                 <table>
                     <thead>
-                        <th>ID hợp đồng</th>
+                        <th>Phòng</th>
+                        <th>Tên người thuê</th>
                         <th>Ngày lập</th>
                         <th>Ngày kết thúc</th>
                         <th>Tiền cọc</th>
-                        <th>Ghi chú</th>
                         <th>Hành vi</th>
                         <th>Hành vi</th>
                     </thead>
                     <tbody>
-                      
+                        <% for(var i=0;i<hopdong.length;i++){%>
                             <tr>
-
-                                <td>
-                                   001
+                                <td >
+                                    <%=hopdong[i].TenPhong%>
                                 </td>
                                 <td>
-                                  2/10/2020
-                                </td>
-                                <td>2/10/2023</td>
-                                <td>
-                                   500.000 vnd
+                                    <%=hopdong[i].HoTen%>
                                 </td>
                                 <td>
-                                    Không
+                                    <%=hopdong[i].NgayLap%>
+                                </td>
+                                <td>
+                                    <%=hopdong[i].NgayKetThuc%>
+                                </td>
+                                <td>
+                                    <%=hopdong[i].TienCoc%>
                                 </td>
                                 
                                 <td>
@@ -159,7 +170,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+                        <% } %>   
                     </tbody>
                 </table>
             </div>

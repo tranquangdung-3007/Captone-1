@@ -111,25 +111,57 @@
             <!-- <h2 class="title">Tạo nhà mới</h2> -->
             <div class="view-form">
                 <div class="recent-orders">
-                    <form method="POST" action="/HouseManagement/addhome">
+                    <form method="POST" action="/ConTractManagement/addContract">
                         <div class="text-input">
-                            <input type="date" id="ngaylap" placeholder="Ngày lập">
+                            <label>Tên nhà</label>
+                            <select name="houseID">                                
+                                <% for(var i=0;i<nhatro.length;i++){%>
+                                <option value="<%=nhatro[i].idNhaTro%>"> 
+                                    <%=nhatro[i].TenNhaTro%> 
+                                </option>
+                                <% } %>
+                            </select>
+                        </div>
+
+                        <div class="text-input">
+                            <label>Tên phòng</label>
+                            <select name="roomID">                                
+                                <% for(var i=0;i<nhatro.length;i++){%>
+                                <option value="<%=nhatro[i].idPhongTro%>"> 
+                                    <%=nhatro[i].TenPhong%> 
+                                </option>
+                                <% } %>
+                            </select>
+                        </div>
+
+                        <div class="text-input">
+                            <label>Tên người thuê</label>
+                            <select name="personID">                                
+                                <% for(var i=0;i<nhatro.length;i++){%>
+                                <option value="<%=nhatro[i].idNguoiThue%>">
+                                    <%=nhatro[i].HoTen%> 
+                                </option>
+                                <% } %>
+                            </select>
+                        </div>
+
+                        <div class="text-input">
+                            <input type="date" id="ngaylap" name="ngaylap" placeholder="Ngày lập">
                             <label for="ngaylap">Ngày lập</label>
                         </div>
                         <div class="text-input">
-                            <input type="date" id="ngayketthuc" placeholder="Ngày kết thúc">
+                            <input type="date" id="ngayketthuc" name="ngayketthuc" placeholder="Ngày kết thúc">
                             <label for="ngayketthuc">Ngày kết thúc</label>
                         </div>
                         <div class="text-input">
-                            <input type="text" id="tiencoc" placeholder="Nhập tiền cọc (VND)">
                             <label for="tiencoc">Tiền cọc</label>
+                            <input type="text" id="tiencoc" name="tiencoc" placeholder="Nhập tiền cọc (VND)">
                         </div>
                         <div class="text-input">
-                            <input type="text" id="Ghichu" placeholder="Ghi chú">
                             <label for="Ghichu">Ghi chú</label>
+                            <input type="text" id="ghichu" name="ghichu" placeholder="Ghi chú">
                         </div>
                        
-
                         <button type="submit">Tạo </button>
                     </form>
                 </div>

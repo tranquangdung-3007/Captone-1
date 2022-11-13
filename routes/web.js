@@ -27,15 +27,15 @@ let initWebRoutes = (app) => {
     router.get("/forgotPassword", forgotPasswordController.handleHelloWorld);
     router.get("/register", registerController.getPageRegister);
     router.post("/register", auth.validateRegister, registerController.createNewUser);
-    router.get("/ServiceManagement", listServiceController.viewService);
-    router.get("/ContractManagement", listContractController.viewContract);
     router.get("/home", homePageController.viewHome);
+
     router.get("/HouseManagement", listHouseController.viewManagerHouse);
     router.get("/HouseManagement/addhome", listHouseController.addHomebtn);
     router.post("/HouseManagement/addhome", listHouseController.addHouse);
     router.get("/HouseManagement/edithome/:id", listHouseController.edithome);
     router.post("/HouseManagement/edithome/:id", listHouseController.updatehome);
     router.get("/HouseManagement/deletehome/:id", listHouseController.deletehome);
+
     router.get("/RoomManagement/editroom/:id", listRoomController.editroom);
     router.post("/RoomManagement/editroom/:id", listRoomController.updateroom);
     router.get("/RoomManagement/deleteroom/:id", listRoomController.deleteroom);
@@ -43,15 +43,24 @@ let initWebRoutes = (app) => {
     router.post("/RoomManagement/addRoom", listRoomController.addRoombtn);
     router.get("/RoomManagement", listRoomController.viewRoomByID);
     router.post("/RoomManagement", listRoomController.viewRoom);
+
     router.get("/TenantsManagement", listTenantsController.viewTenants);
     router.post("/TenantsManagement", listTenantsController.viewTenantsByHouse);
     router.get("/TenantsManagement/addtenants", listTenantsController.addTenants);
+    router.post("/TenantsManagement/addtenants", listTenantsController.addTenantsbtn);
     router.get("/TenantsManagement/edittenants/:id", listTenantsController.edittenants);
     router.post("/TenantsManagement/edittenants/:id", listTenantsController.updatetenants);
     router.get("/TenantsManagement/deletetenants/:id", listTenantsController.deletetenants);
-    router.post("/TenantsManagement/addtenants", listTenantsController.addTenantsbtn);
+
+    router.get("/ContractManagement", listContractController.viewContract);
+    router.post("/ContractManagement", listContractController.viewContractByHouse);
     router.get("/ContractManagement/addcontract", listContractController.addContract);
+    router.post("/ContractManagement/addcontract", listContractController.addContractbtn);
+
+
+    router.get("/ServiceManagement", listServiceController.viewService);
     router.get("/ServiceManagement/addservice", listServiceController.addService);
+
     router.post("/logout", loginController.postLogOut);
     return app.use("/", router);
 };

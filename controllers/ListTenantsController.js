@@ -37,6 +37,7 @@ let addTenantsbtn = async (req, res) => {
         res.redirect("/TenantsManagement");
     })
 }
+
 let edittenants = async (req, res) => {
     var id = req.params.id;
     connection.query(`SELECT * FROM nguoithue where idNguoiThue = '${id}'`, function (err, data) {

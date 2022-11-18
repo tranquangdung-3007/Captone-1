@@ -34,13 +34,13 @@ let updatehome = async (req, res) => {
     res.redirect('/HouseManagement');
 }
 
-let deletehome = async (req, res) => {
-    var id = req.params.id;
-    var sql = 'DELETE FROM nhatro WHERE idNhaTro = ?';
-    connection.query(sql, [id], function (err, data) {
-        if (err) throw err;
-    });
-    res.redirect('/HouseManagement');
+let deletehome = async (req, res, confirm) => {
+        var id = req.params.id;
+            var sql = 'DELETE FROM nhatro WHERE idNhaTro = ?';
+            connection.query(sql, [id], function (err, data) {
+                if (err) throw err;
+            });
+        res.redirect('/HouseManagement');  
 }
 
 module.exports = {

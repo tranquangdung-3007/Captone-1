@@ -8,6 +8,8 @@ const listRoomController = require("../controllers/ListRoomController");
 const listTenantsController = require("../controllers/ListTenantsController");
 const listServiceController = require("../controllers/ListServiceController");
 const listContractController = require("../controllers/ListContractControlller");
+const listReceiptController = require("../controllers/ListReceiptController");
+
 const auth = require("../validation/authValidation");
 const passport = require("passport");
 const initPassportLocal = require("../controllers/passportLocalController");
@@ -27,6 +29,7 @@ let initWebRoutes = (app) => {
     router.get("/forgotPassword", forgotPasswordController.handleHelloWorld);
     router.get("/register", registerController.getPageRegister);
     router.post("/register", auth.validateRegister, registerController.createNewUser);
+
     router.get("/home", homePageController.viewHome);
 
     router.get("/HouseManagement", listHouseController.viewManagerHouse);
@@ -57,9 +60,15 @@ let initWebRoutes = (app) => {
     router.get("/ContractManagement/addcontract", listContractController.addContract);
     router.post("/ContractManagement/addcontract", listContractController.addContractbtn);
 
-
     router.get("/ServiceManagement", listServiceController.viewService);
     router.get("/ServiceManagement/addservice", listServiceController.addService);
+
+    router.get("/ReceiptManagement", listReceiptController.viewReceipt);
+    router.post("/ReceiptManagement", listReceiptController.viewReceiptByHouse);
+    router.get("/ReceiptManagement/addreceipt", listReceiptController.addReceipt);
+    router.post("/ReceiptManagement/addreceipt", listReceiptController.addReceiptbtn);
+
+
 
     router.post("/logout", loginController.postLogOut);
     return app.use("/", router);

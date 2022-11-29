@@ -38,9 +38,39 @@ let addReceiptbtn = async (req, res) => {
     })
 }
 
+let editReceipt = async (req, res) => {
+    var id = req.params.id;
+    connection.query(`SELECT * FROM hoadon where idHoaDon = '${id}'`, function (err, data) {
+        if (err) throw err;
+        res.render('editReceipt.ejs', { editData: data[0] });
+    })
+}
+
+let updateReceipt = async (req, res) => {
+    var id = req.params.id;
+    var updateData = req.body;
+    var sql = `UPDATE hoadon SET ? WHERE idHoaDon = ?`;
+    connection.query(sql, [updateData, id], function (err) {
+        if (err) throw err;
+    });
+    res.redirect('/ReceiptManagement');
+}
+
+let deleteReceipt = async (req, res) => {
+    var id = req.params.id;
+    var sql = 'DELETE FROM hoadon WHERE idHoaDon = ?';
+    connection.query(sql, [id], function (err, data) {
+        if (err) throw err;
+    });
+    res.redirect('/ReceiptManagement');
+}
+
 module.exports = {
     viewReceipt: viewReceipt,
     viewReceiptByHouse: viewReceiptByHouse,
     addReceipt: addReceipt,
     addReceiptbtn: addReceiptbtn,
+    editReceipt: editReceipt,
+    updateReceipt: updateReceipt,
+    deleteReceipt: deleteReceipt
 };

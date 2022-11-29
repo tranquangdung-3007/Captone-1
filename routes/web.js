@@ -67,6 +67,9 @@ let initWebRoutes = (app) => {
     router.post("/ReceiptManagement", listReceiptController.viewReceiptByHouse);
     router.get("/ReceiptManagement/addreceipt", listReceiptController.addReceipt);
     router.post("/ReceiptManagement/addreceipt", listReceiptController.addReceiptbtn);
+    router.get("/ReceiptManagement/editReceipt/:id", listReceiptController.editReceipt);
+    router.post("/ReceiptManagement/editReceipt/:id", listReceiptController.updateReceipt);
+    router.get("/ReceiptManagement/deleteReceipt/:id", listReceiptController.deleteReceipt);
 
 
 

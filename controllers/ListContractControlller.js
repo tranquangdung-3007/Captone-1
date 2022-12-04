@@ -5,7 +5,7 @@ let viewContract = async (req, res) => {
     var id = req.params.id;
     connection.query(`SELECT idNhaTro, TenNhaTro FROM nhatro `, function (err, nhatro) {
         if (err) throw err;
-        var sql = "SELECT idHopDong, NgayLap, NgayKetThuc, GhiChu, TienCoc FROM hopdong";
+        var sql = "SELECT idHopDong, DATE_FORMAT(NgayLap, '%d-%m-%Y') NgayLap,  DATE_FORMAT(NgayKetThuc, '%d-%m-%Y') NgayKetThuc, GhiChu, TienCoc FROM hopdong";
         connection.query(sql, [id], function (err, hopdong) {
             if (err) throw err;
             res.render("ContractManagement.ejs", {nhatro: nhatro, hopdong: hopdong});

@@ -49,7 +49,7 @@ let edittenants = async (req, res) => {
 let updatetenants = async (req, res) => {
     var id = req.params.id;
     var updateData = req.body;
-    var sql = `UPDATE nguoithue SET ? WHERE idNguoiThue = ?`;
+    var sql = 'UPDATE nguoithue SET ? WHERE idNguoiThue = ?';
     connection.query(sql, [updateData, id], function (err) {
         if (err) throw err;
     });

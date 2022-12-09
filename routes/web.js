@@ -49,6 +49,9 @@ let initWebRoutes = (app) => {
 
     router.get("/TenantsManagement", listTenantsController.viewTenants);
     router.post("/TenantsManagement", listTenantsController.viewTenantsByHouse);
+    router.get("/TenantsManagement/view/:id", listTenantsController.view);
+    router.get("/TenantsManagement/settingPassword", listTenantsController.viewSetting);
+    router.get("/TenantsManagement/viewAccount", listTenantsController.viewAccount);
     router.get("/TenantsManagement/addtenants", listTenantsController.addTenants);
     router.post("/TenantsManagement/addtenants", listTenantsController.addTenantsbtn);
     router.get("/TenantsManagement/edittenants/:id", listTenantsController.edittenants);

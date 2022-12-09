@@ -64,6 +64,24 @@ let deletetenants = async (req, res) => {
     });
     res.redirect('/TenantsManagement');
 }
+
+let view = async (req, res) => {
+    var id = req.params.id;
+    connection.query(`SELECT distinct idNguoiThue, HoTen, NamSinh, nguoithue.DiaChi, CMND, SoDienThoai, GioiTinh, nguoithue.idNhaTro, TenNhaTro, nguoithue.idPhong, TenPhong
+    FROM nguoithue, nhatro, phongtro where nguoithue.idNhaTro = nhatro.idNhaTro and nguoithue.idPhong = phongtro.idPhongTro and idNguoiThue = '${id}'`, function (err, data, nguoithue) {
+        if (err) throw err;
+        res.render('viewTenants.ejs', { editData: data[0], nguoithue: nguoithue });
+    })
+}
+
+let viewSetting = async (req, res) => {
+    res.render("settingPassword.ejs");
+}
+
+let viewAccount = async (req, res) => {
+    res.render("viewAccount.ejs");
+}
+
 module.exports = {
     viewTenantsByHouse: viewTenantsByHouse,
     addTenants: addTenants,
@@ -71,7 +89,8 @@ module.exports = {
     addTenantsbtn: addTenantsbtn,
     edittenants: edittenants,
     updatetenants: updatetenants,
-    deletetenants: deletetenants
-
-
+    deletetenants: deletetenants,
+    view: view,
+    viewSetting: viewSetting,
+    viewAccount: viewAccount,
 };

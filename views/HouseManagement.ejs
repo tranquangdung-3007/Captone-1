@@ -105,7 +105,7 @@
         <main>
             <h1>Quản lý nhà</h1>
 
-            <div class="date">
+            <div class="date" id="curent-day">
                 <input type="date">
             </div>
 
@@ -118,6 +118,7 @@
                 <h2>Danh sách khu nhà thuê</h2>
                 <table>
                     <thead>
+                        <th>Stt</th>
                         <th>Tên nhà trọ</th>
                         <th>Địa chỉ</th>
                         <th>Trạng thái</th>
@@ -127,7 +128,7 @@
                     <tbody>
                         <% for(var i=0;i<nhatro.length;i++){%>
                             <tr>
-
+                                <td><%=i+1%></td>
                                 <td>
                                     <%=nhatro[i].TenNhaTro%>
                                 </td>
@@ -259,6 +260,7 @@
             </div>
         </div>
     </div>
+    <script src="/js/dung.js"></script>
 </body>
 
 </html>

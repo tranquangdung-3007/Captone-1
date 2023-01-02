@@ -238,7 +238,7 @@ main {
 }
 
 main .date {
-  width: 200px;
+  width: 160px;
   display: inline-block;
   background: var(--color-light);
   border-radius: var(--boder-radius-1);

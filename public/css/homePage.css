@@ -142,7 +142,6 @@ aside {
 }
 
 aside .top {
-    background: var(--color-white);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -242,7 +241,7 @@ main {
 }
 
 main .date {
-    width: 200px;
+    width: 160px;
     display: inline-block;
     background: var(--color-light);
     border-radius: var(--boder-radius-1);

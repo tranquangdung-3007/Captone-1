@@ -15,3 +15,9 @@ themeToggle.onclick = function () {
     themeToggle.querySelector('span:nth-child(1)').classList.toggle('active');
     themeToggle.querySelector('span:nth-child(2)').classList.toggle('active');
 }
+
+var today = new Date();
+   var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+   var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+   var dateTime = date+' '+time;
+   document.getElementById("curent-day").innerHTML = dateTime;

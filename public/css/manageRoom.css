@@ -192,13 +192,14 @@ small {
   margin-top: 1.4rem;
 }
 
-.container main .date {
-  width: 200px;
+main .date {
+  width: 160px;
   display: inline-block;
   background: var(--color-light);
   border-radius: var(--boder-radius-1);
   margin-top: 1rem;
   padding: 0.5rem 1.6rem;
+  text-align: center;
 }
 
 .container main .date input {
@@ -226,23 +227,25 @@ small {
 
 .container main .recent-orders .top-recent select {
   color: white;
-  padding: 10px;
-  background-color: #06875c;
+  padding: 10px 20px;
+  background-color: #05a06d;
   border-radius: 10px;
+  outline: none;
+  border: none;
 }
 
 .container main .recent-orders .top-recent a .btn-addhouse {
   padding: 10px;
-  border: 1px solid #000;
   border-radius: 10px;
-  background: #024d34;
+  background: #05a06d;
   cursor: pointer;
   color: white;
   font-weight: bold;
+  outline: none;
 }
 
 .container main .recent-orders .top-recent a .btn-addhouse:hover {
-  background-color: #06875c;
+  background-color: #036c49;
 }
 
 .container main .recent-orders h2 {
@@ -251,16 +254,16 @@ small {
 
 .container main .recent-orders .top-recent form > button{
   margin-left: 10px;
-  border: 1px solid #000;
   border-radius: 10px;
-  background-color: #06875c;
+  background-color: #05a06d;
   padding: 10px 20px;
   color: white;
   font-weight: 500;
   cursor: pointer;
+  outline: none;
 }
 .container main .recent-orders .top-recent form > button:hover{
-  background-color: #07d18e;
+  background-color: #036c49;
 }
 
 .container main .recent-orders table {

@@ -115,34 +115,33 @@
                 <div class="recent-orders">
                     <h2 class="title">Thêm nhà</h2>
                     <form method="POST" action="/HouseManagement/addhome">
-                        <div class="text-input">
-                            <input type="text" id="tennhatro" name="tennhatro" placeholder="Tên nhà trọ của bạn..."
+                        <label for="Tennhatro">Tên nhà trọ</label>
+                        <input type="text" id="tennhatro" name="tennhatro" placeholder="Tên nhà trọ của bạn..."
                             required>
-                            <label for="Tennhatro">Tên nhà trọ</label>
-                        </div>
-                        <div class="text-input">
-                            <input type="text" id="thanhpho" name="thanhpho" placeholder="Thành phố..." required>
-                            <label for="Thanhpho">Thành phố</label>
-                        </div>
-                        <div class="text-input">
-                            <input type="text" id="quan" name="quan" placeholder="Quận..." required>
-                            <label for="Quan">Quận</label>
-                        </div>
-                        <div class="text-input">
-                            <input type="text" id="phuong" name="phuong" placeholder="Phường..." required>
-                            <label for="Phuong">Phường</label>
-                        </div>
-                        <div class="text-input">
-                            <input type="text" id="diachi" name="diachi" placeholder="Địa chỉ..." required>
-                            <label for="Diachi">Địa chỉ</label>
-                        </div>
-                        <button type="submit">Tạo </button>
 
+                        <label for="Thanhpho">Thành phố/ Tỉnh</label>
+                        <input type="text" id="thanhpho" name="thanhpho" placeholder="Thành phố..." required>
+
+                        <label for="Quan">Quận/ Huyện</label>
+                        <input type="text" id="quan" name="quan" placeholder="Quận/ Huyện..." required>
+
+                        <label for="Phuong">Phường/ Xã</label>
+                        <input type="text" id="phuong" name="phuong" placeholder="Phường/ Xã..." required>
+
+                        <label for="Diachi">Số nhà</label>
+                        <input type="text" id="diachi" name="diachi" placeholder="Số nhà..." required>
+
+                        <div class="btn-form">
+                            <a href="/HouseManagement">
+                                <div class="btn-return">Quay lại</div>
+                            </a>
+                            <button type="submit">Tạo </button>
+                        </div>
                     </form>
                 </div>
             </div>
         </main>
-        
+
         <div class="right">
             <div class="top">
                 <button id="menu-btn">

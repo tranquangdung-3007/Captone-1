@@ -108,57 +108,51 @@
 
         <main>
             <h1>Quản lý người thuê</h1>
-            <div class="date">
+            <div class="date" id="curent-day">
                 <input type="date">
             </div>
             <div class="view-form">
                 <div class="recent-orders">
-                    <h2 class="title">Chỉnh sửa người thuê</h2>
+                    <h2 class="title">Thông tin người thuê</h2>
                     <form method="POST"
                         action="<%=(typeof editData!='undefined')?'/TenantsManagement/edittenants/'+editData.idNguoiThue:''%>">
-                        <div class="text-input">
-                            <input type="text" id="hoten" name="hoten"
-                                value="<%=(typeof editData!='undefined')? editData.HoTen:''%>"
-                                placeholder="Nhập họ và tên người thuê" required>
-                            <label for="Tennguoithue">Họ và tên</label>
-                        </div>
-                        <div class="text-input">
-                            <input type="text" id="diachi" name="diachi"
-                                value="<%=(typeof editData!='undefined')? editData.DiaChi:''%>"
-                                placeholder="Nhập địa chỉ" required>
-                            <label for="Diachi">Địa chỉ</label>
-                        </div>
+                        <label for="Tennguoithue">Họ và tên</label>
+                        <input type="text" id="hoten" name="hoten" value="<%=(typeof editData!='undefined')? editData.HoTen:''%>" placeholder="Nhập họ và tên người thuê" required>
+
+                        <label for="Diachi">Quê Quán</label>
+                        <input type="text" id="diachi" name="diachi" value="<%=(typeof editData!='undefined')? editData.DiaChi:''%>" placeholder="Nhập địa chỉ" required>
+
+
                         <div class="selection-view-group">
-                            <div class="text-input">
-                                <input type="text" id="namsinh" name="namsinh"
-                                    value="<%=(typeof editData!='undefined')? editData.NamSinh:''%>"
-                                    placeholder="Nhập năm sinh" required>
+                            <div class="form-sup-1">
                                 <label for="Namsinh">Năm sinh</label>
+                                <input type="text" id="namsinh" name="namsinh" value="<%=(typeof editData!='undefined')? editData.NamSinh:''%>" placeholder="Nhập năm sinh" required>
                             </div>
-                            <div class="text-input">
-                                <input type="text" id="cmnd" name="cmnd"
-                                    value="<%=(typeof editData!='undefined')? editData.CMND:''%>"
-                                    placeholder="Nhập CMND/CCCD" required>
+
+                            <div class="form-sup-1 form-sup">
                                 <label for="CMND">CMND/CCCD</label>
+                                <input type="text" id="cmnd" name="cmnd" value="<%=(typeof editData!='undefined')? editData.CMND:''%>" placeholder="Nhập CMND/CCCD" required>
                             </div>
+
                         </div>
+
                         <div class="selection-view-group">
-                            <div class="text-input">
-                                <input type="text" id="sodienthoai" name="sodienthoai"
-                                    value="<%=(typeof editData!='undefined')? editData.SoDienThoai:''%>"
-                                    placeholder="Nhập số điện thoại" required>
+                            <div class="form-sup-1">
                                 <label for="SDT">Số điện thoại</label>
+                                <input type="text" id="sdt" name="sdt" value="<%=(typeof editData!='undefined')? editData.SoDienThoai:''%>" placeholder="Nhập số điện thoại" required>
                             </div>
-                            <div class="text-input">
 
-                                <input type="text" id="gioitinh" name="gioitinh"
-                                    value="<%=(typeof editData!='undefined')? editData.GioiTinh:''%>"
-                                    placeholder="Nam/Nữ" required>
+                            <div class="form-sup-1 form-sup">
                                 <label for="Gioitinh">Giới tính</label>
+                                <input type="text" id="gioitinh" name="gioitinh" value="<%=(typeof editData!='undefined')? editData.GioiTinh:''%>" placeholder="Nam/Nữ" required>
                             </div>
                         </div>
-                        <button type="submit">Lưu</button>
-
+                        <div class="btn-form">
+                            <a href="/TenantsManagement">
+                                <div class="btn-return">Quay lại</div>
+                            </a>
+                            <button type="submit">Lưu</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -271,6 +265,7 @@
         </div>
     </div>
     <script src="/js/dark-light.js"></script>
+    <script src="/js/dung.js"></script>
 </body>
 
 </html>

@@ -17,7 +17,7 @@ themeToggle.onclick = function () {
 }
 
 var today = new Date();
-   var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+   var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
    var dateTime = date+' '+time;
-   document.getElementById("curent-day").innerHTML = dateTime;
+   document.getElementById("curent-day").innerHTML = date;

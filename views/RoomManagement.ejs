@@ -106,7 +106,7 @@
         <main>
             <h1>Quản lý phòng</h1>
 
-            <div class="date">
+            <div class="date" id="curent-day">
                 <input type="date">
             </div>
 
@@ -132,6 +132,7 @@
                 </div>
                 <table>
                     <thead>
+                        <th>STT</th>
                         <th>Số phòng</th>
                         <th>Giá</th>
                         <th>Trạng thái</th>
@@ -141,6 +142,7 @@
                     <tbody>
                         <% for(var i=0;i<phongtro.length;i++){%>
                             <tr>
+                                <td><%=i+1%></td>
                                 <td>
                                     <%=phongtro[i].TenPhong%>
                                 </td>
@@ -274,6 +276,7 @@
             </div>
         </div>
     </div>
+    <script src="/js/dung.js"></script>
 </body>
 
 </html>

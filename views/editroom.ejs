@@ -108,7 +108,7 @@
 
         <main>
             <h1>Quản lý phòng</h1>
-            <div class="date">
+            <div class="date" id="curent-day">
                 <input type="date">
             </div>
             <div class="view-form">
@@ -116,31 +116,32 @@
                     <h2 class="title">Chỉnh sửa phòng</h2>
                     <form method="POST"
                         action="<%=(typeof editData!='undefined')?'/RoomManagement/editroom/'+editData.idPhongTro:''%>">
-                        <div class="text-input">
-                            <input type="text" id="tenphong" name="tenphong"
-                                value="<%=(typeof editData!='undefined')? editData.TenPhong:''%>"
-                                placeholder="Nhập số phòng trọ">
-                            <label for="Tenphong">Số phòng</label>
+                        <label for="Tenphong">Số phòng</label>
+                        <input type="text" id="tenphong" name="tenphong"
+                            value="<%=(typeof editData!='undefined')? editData.TenPhong:''%>"
+                            placeholder="Nhập số phòng trọ..." required>
+
+                        <label for="Succhua">Sức chứa</label>
+                        <input type="number" id="succhua" name="succhua"
+                            value="<%=(typeof editData!='undefined')? editData.SucChua:''%>"
+                            placeholder="Nhập sức chứa..." required>
+
+                        <label for="Dientich">Diện tích (m2)</label>
+                        <input type="text" id="dientich" name="dientich"
+                            value="<%=(typeof editData!='undefined')? editData.DienTich:''%>"
+                            placeholder="Nhập diện tích phòng..." required>
+
+                        <label for="Gia">Giá phòng</label>
+                        <input type="text" id="gia" name="gia"
+                            value="<%=(typeof editData!='undefined')? editData.Gia:''%>"
+                            placeholder="Nhập giá thuê phòng" required>
+
+                        <div class="btn-form">
+                            <a href="/RoomManagement">
+                                <div class="btn-return">Quay lại</div>
+                            </a>
+                            <button type="submit">Tạo </button>
                         </div>
-                        <div class="text-input">
-                            <input type="text" id="succhua" name="succhua"
-                                value="<%=(typeof editData!='undefined')? editData.SucChua:''%>"
-                                placeholder="Nhập số phòng trọ">
-                            <label for="Succhua">Sức chứa</label>
-                        </div>
-                        <div class="text-input">
-                            <input type="text" id="dientich" name="dientich"
-                                value="<%=(typeof editData!='undefined')? editData.DienTich:''%>"
-                                placeholder="Nhập số phòng trọ">
-                            <label for="Dientich">Diện tích</label>
-                        </div>
-                        <div class="text-input">
-                            <input type="number" id="gia" name="gia"
-                                value="<%=(typeof editData!='undefined')? editData.Gia:''%>"
-                                placeholder="Nhập số phòng trọ">
-                            <label for="Gia">Giá</label>
-                        </div>
-                        <button type="submit">Lưu</button>
                     </form>
                 </div>
             </div>
@@ -253,6 +254,7 @@
         </div>
     </div>
     <script src="/js/dark-light.js"></script>
+    <script src="/js/dung.js"></script>
 </body>
 
 </html>

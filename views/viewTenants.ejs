@@ -111,141 +111,49 @@
             </div>
 
             <div class="recent-orders">
-                <h2>Danh sách người thuê phòng</h2>
-                <div class="top-recent">
-                    <form action="/home" method="post">
-                        <select>
-                            <option>Nguyễn Hải Phú</option>
-                            <option>Phát</option>
-                        </select>
-                        <button type="submit">Tìm</button>
-                    </form>
-                   
-                </div>
+                <nav>Thông tin cá nhân</nav>
                 <div class="view">
-                    <div class="card-body-left card-body">
-                        <div class="head-card">
-                            <div class="avatar">
-                                <img src="img/avatar.jpg" alt="">
-                            </div>
-                            <div class="name">
-                                <nav>
-                                    <%=(typeof editData!='undefined')? editData.HoTen:''%>                              
-                                </nav>                               
-                            </div>
-                        </div>
-                        <div class="info-user">
-                            <div>
-                                <span class="col1">Email</span>
-                                <span class="col2">haiphudtu@gmail.com</span>
-                            </div>
-                            <div>
-                                <span class="col1">Số điện thoại</span>
-                                <span class="col2"><%=(typeof editData!='undefined')? editData.SoDienThoai:''%></span>
-                            </div>
-                            <div>
-                                <span class="col1">Năm sinh</span>
-                                <span class="col2"><%=(typeof editData!='undefined')? editData.NamSinh:''%></span>
-                            </div>
-
-                        </div>
-                        <div class="action">
-                            <a href="">
-                                <nav>Thông tin cá nhân</nav>
-                            </a>
-                            <a href="/TenantsManagement/viewAccount">
-                                <nav>Thông tin tài khoản</nav>
-                            </a>
-                                                      
-                            <a href="/TenantsManagement/settingPassword">
-                                <nav>Cài đặt mật khẩu</nav>
-                            </a>
-                        </div>
-                    </div>
                     <div class="card-body-right card-body">
                         <div class="header-carbody-right">
-                            <nav>Thông tin cá nhân</nav>
-                        </div>
-                        <div>
-                            <nav class="col1">
-                                Ảnh đại diện
-                            </nav>
-                            <nav class="col2">
-                                <img src="img/avatar.jpg" alt="">
-                            </nav>
-                        </div>
-                        <div>
-                            <nav class="col1">
-                                Họ và Tên
-                            </nav>
-                            <nav class="col2">
-                                <input id="hoten" name="hoten"
-                                value="<%=(typeof editData!='undefined')? editData.HoTen:''%>" >
-                            </nav>
-                        </div>
-                        <div>
-                            <nav class="col1">
-                                Năm Sinh
-                            </nav>
-                            <nav class="col2">
-                                <input type="text" id="namsinh" name="namsinh"
-                                value="<%=(typeof editData!='undefined')? editData.NamSinh:''%>">
-                            </nav>
-                        </div>
-                        <div>
-                            <nav class="col1">
-                                Địa chỉ
-                            </nav>
-                            <nav class="col2">
-                                <input type="text" id="namsinh" name="namsinh"
-                                value="<%=(typeof editData!='undefined')? editData.DiaChi:''%>">
-                            </nav>
-                        </div>
-                        <div>
-                            <nav class="col1">
-                                CMND/CCCD
-                            </nav>
-                            <nav class="col2">
-                                <input type="text" id="cmnd" name="cmnd"
-                                value="<%=(typeof editData!='undefined')? editData.CMND:''%>">
-                            </nav>
-                        </div>
-                        <div>
-                            <nav class="col1">
-                                Số Điện thoại
-                            </nav>
-                            <nav class="col2">
-                                <input type="text" id="sodienthoai" name="sodienthoai"
-                                value="<%=(typeof editData!='undefined')? editData.SoDienThoai:''%>">
-                            </nav>
-                        </div>
-                        <div>
-                            <nav class="col1">
-                                Giới tính
-                            </nav>
-                            <nav class="col2" >
-                                <input checked="checked" name="gioitinh" type="radio" value="Nam" style="width:10%" >Nam
-                                <input type="radio" name="gioitinh" value="Nữ" style="width:10%" >Nữ
-                            </nav>
-                        </div>
-                        <div>
-                            <nav class="col1">
-                                Nhà đang thuê
-                            </nav>
-                            <nav class="col2"> 
-                                <input type="text" id="nhatro" name="nhatro"
-                                value="<%=(typeof editData!='undefined')? editData.TenNhaTro:''%>">
-                            </nav>
-                        </div>
-                        <div>
-                            <nav class="col1">
-                                Phòng đang thuê
-                            </nav>
-                            <nav class="col2">
-                                <input type="text" id="tenphong" name="tenphong"
-                                value="<%=(typeof editData!='undefined')? editData.TenPhong:''%>">
-                            </nav>
-                        </div>
+                            
+
+                            <label for="Tennguoithue">Họ và tên</label>
+                            <input type="text" id="hoten" name="hoten" placeholder="Nhập họ và tên người thuê" required>
+    
+                            <label for="Diachi">Quê Quán</label>
+                            <input type="text" id="diachi" name="diachi" placeholder="Nhập địa chỉ" required>
+    
+                            <div class="selection-view-group">
+                                <div class="form-sup-1">
+                                    <label for="Namsinh">Năm sinh</label>
+                                    <input type="text" id="namsinh" name="namsinh" placeholder="Nhập năm sinh" required>
+                                </div>
+    
+                                <div class="form-sup-1 form-sup">
+                                    <label for="CMND">CMND/CCCD</label>
+                                    <input type="text" id="cmnd" name="cmnd" placeholder="Nhập CMND/CCCD" required>
+                                </div>
+    
+                            </div>
+    
+                            <div class="selection-view-group">
+                                <div class="form-sup-1">
+                                    <label for="SDT">Số điện thoại</label>
+                                    <input type="text" id="sdt" name="sdt" placeholder="Nhập số điện thoại" required>
+                                </div>
+    
+                                <div class="form-sup-1 form-sup">
+                                    <label for="Gioitinh">Giới tính</label>
+                                    <input type="text" id="gioitinh" name="gioitinh" placeholder="Nam/Nữ" required>
+                                </div>
+                            </div>
+    
+                            <div class="btn-form">
+                                <a href="/TenantsManagement">
+                                    <div class="btn-return">Quay lại</div>
+                                </a>
+                                <button type="submit">Tạo </button>
+                            </div>
                         
                         <div class="button">
 

@@ -115,40 +115,39 @@
             <div class="view-form">
                 <div class="recent-orders">
                     <h2 class="title">Chỉnh sửa nhà</h2>
-                    <form method="POST"
+                    <form form method="POST"
                         action="<%=(typeof editData!='undefined')?'/HouseManagement/edithome/'+editData.idNhaTro:''%>">
-                        <div class="text-input">
-                            <input type="text" id="tennhatro" name="tennhatro"
-                                value="<%=(typeof editData!='undefined')? editData.TenNhaTro:''%>"
-                                placeholder="Tên nhà trọ của bạn..." required>
-                            <label for="Tennhatro">Tên nhà trọ</label>
+                        <label for="Tennhatro">Tên nhà trọ</label>
+                        <input type="text" id="tennhatro" name="tennhatro"
+                            value="<%=(typeof editData!='undefined')? editData.TenNhaTro:''%>" placeholder=" Tên nhà trọ
+                            của bạn..." required>
+
+                        <label for="Thanhpho">Thành phố/ Tỉnh</label>
+                        <input type="text" id="thanhpho" name="thanhpho"
+                            value="<%=(typeof editData!='undefined')? editData.ThanhPho:''%>" placeholder="Thành phố..."
+                            required>
+
+                        <label for="Quan">Quận/ Huyện</label>
+                        <input type="text" id="quan" name="quan"
+                            value="<%=(typeof editData!='undefined')? editData.Quan:''%>" placeholder="Quận..."
+                            placeholder="Quận..." required>
+
+                        <label for="Phuong">Phường/ Xã</label>
+                        <input type="text" id="phuong" name="phuong"
+                            value="<%=(typeof editData!='undefined')? editData.Phuong:''%>" placeholder="Phường..."
+                            placeholder="Phường..." required>
+
+                        <label for="Diachi">Số nhà</label>
+                        <input type="text" id="diachi" name="diachi"
+                            value="<%=(typeof editData!='undefined')? editData.DiaChi:''%>" placeholder="Địa chỉ..."
+                            placeholder="Số nhà..." required>
+
+                        <div class="btn-form">
+                            <a href="/HouseManagement">
+                                <div class="btn-return">Quay lại</div>
+                            </a>
+                            <button type="submit">Lưu</button>
                         </div>
-                        <div class="text-input">
-                            <input type="text" id="thanhpho" name="thanhpho"
-                                value="<%=(typeof editData!='undefined')? editData.ThanhPho:''%>"
-                                placeholder="Thành phố..." placeholder="Thành phố..." required>
-                            <label for="Thanhpho">Thành phố</label>
-                        </div>
-                        <div class="text-input">
-                            <input type="text" id="quan" name="quan"
-                                value="<%=(typeof editData!='undefined')? editData.Quan:''%>" placeholder="Quận..."
-                                placeholder="Quận..." required>
-                            <label for="Quan">Quận</label>
-                        </div>
-                        <div class="text-input">
-                            <input type="text" id="phuong" name="phuong"
-                                value="<%=(typeof editData!='undefined')? editData.Phuong:''%>" placeholder="Phường..."
-                                placeholder="Phường..." required>
-                            <label for="Phuong">Phường</label>
-                        </div>
-                        <div class="text-input">
-                            <input type="text" id="diachi" name="diachi"
-                                value="<%=(typeof editData!='undefined')? editData.DiaChi:''%>" placeholder="Địa chỉ..."
-                                placeholder="Địa chỉ..." required>
-                            <label for="Diachi">Địa chỉ</label>
-                        </div>
-                        <button type="submit">Lưu</button>
-                    </form>
                     </form>
                 </div>
             </div>
@@ -264,4 +263,5 @@
     <script src="/js/dark-light.js"></script>
     <script src="/js/dung.js"></script>
 </body>
+
 </html>

@@ -247,6 +247,7 @@ main .date {
     border-radius: var(--boder-radius-1);
     margin-top: 1rem;
     padding: 0.5rem 1.6rem;
+    text-align: center;
 }
 
 main .date input[type="date"] {

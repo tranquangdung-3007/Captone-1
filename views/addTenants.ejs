@@ -104,19 +104,21 @@
         </aside>
 
         <main>
-            <h1>Thêm người thuê</h1>
-            <div class="date">
+            <h1>Quản lý người thuê</h1>
+            <div class="date" id="curent-day">
                 <input type="date">
             </div>
-            <!-- <h2 class="title">Tạo nhà mới</h2> -->
             <div class="view-form">
                 <div class="recent-orders">
+                    <h2 class="title">Thêm người thuê mới</h2>
                     <form method="POST" action="/TenantsManagement/addTenants">
 
                         <div class="selection-view-group">
-                            <div class="text-input">
-                                <label>Tên nhà</label>
+
+                            <div class="form-select-house">
+                                <label>Tên nhà:</label>
                                 <select name="houseID">
+                                    <option value="allHouse">Chọn nhà</option>
                                     <% for(var i=0;i<nhatro.length;i++){%>
                                         <option value="<%=nhatro[i].idNhaTro%>">
                                             <%=nhatro[i].TenNhaTro%>
@@ -125,9 +127,10 @@
                                 </select>
                             </div>
 
-                            <div class="text-input">
-                                <label>Tên phòng</label>
+                            <div class="form-select-room">
+                                <label>Tên phòng:</label>
                                 <select name="roomID">
+                                    <option value="allRoom">Chọn phòng</option>
                                     <% for(var i=0;i<nhatro.length;i++){%>
                                         <option value="<%=nhatro[i].idPhongTro%>">
                                             <%=nhatro[i].TenPhong%>
@@ -135,42 +138,47 @@
                                         <% } %>
                                 </select>
                             </div>
+
                         </div>
 
-                        <div class="text-input">
-                            <input type="text" id="hoten" name="hoten" placeholder="Nhập họ và tên người thuê" required>
-                            <label for="Tennguoithue">Họ và tên</label>
-                        </div>
-                        <div class="text-input">
-                            <input type="text" id="diachi" name="diachi" placeholder="Nhập địa chỉ" required>
-                            <label for="Diachi">Địa chỉ</label>
-                        </div>
+                        <label for="Tennguoithue">Họ và tên</label>
+                        <input type="text" id="hoten" name="hoten" placeholder="Nhập họ và tên người thuê" required>
+
+                        <label for="Diachi">Quê Quán</label>
+                        <input type="text" id="diachi" name="diachi" placeholder="Nhập địa chỉ" required>
+
+
                         <div class="selection-view-group">
-                            <div class="text-input">
-                                <input type="text" id="namsinh" name="namsinh" placeholder="Nhập năm sinh"
-                                    required>
+                            <div class="form-sup-1">
                                 <label for="Namsinh">Năm sinh</label>
+                                <input type="text" id="namsinh" name="namsinh" placeholder="Nhập năm sinh" required>
                             </div>
-                            <div class="text-input">
 
-                                <input type="text" id="cmnd" name="cmnd" placeholder="Nhập CMND/CCCD" required>
+                            <div class="form-sup-1 form-sup">
                                 <label for="CMND">CMND/CCCD</label>
+                                <input type="text" id="cmnd" name="cmnd" placeholder="Nhập CMND/CCCD" required>
                             </div>
+
                         </div>
+
                         <div class="selection-view-group">
-                            <div class="text-input">
-
-                                <input type="text" id="sdt" name="sdt" placeholder="Nhập số điện thoại" required>
+                            <div class="form-sup-1">
                                 <label for="SDT">Số điện thoại</label>
+                                <input type="text" id="sdt" name="sdt" placeholder="Nhập số điện thoại" required>
                             </div>
-                            <div class="text-input">
 
-                                <input type="text" id="gioitinh" name="gioitinh" placeholder="Nam/Nữ" required>
+                            <div class="form-sup-1 form-sup">
                                 <label for="Gioitinh">Giới tính</label>
+                                <input type="text" id="gioitinh" name="gioitinh" placeholder="Nam/Nữ" required>
                             </div>
                         </div>
 
-                        <button type="submit">Thêm </button>
+                        <div class="btn-form">
+                            <a href="/TenantsManagement">
+                                <div class="btn-return">Quay lại</div>
+                            </a>
+                            <button type="submit">Tạo </button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -283,6 +291,7 @@
             </div>
         </div>
     </div>
+    <script src="/js/dung.js"></script>
 </body>
 
 </html>

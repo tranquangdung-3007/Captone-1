@@ -132,6 +132,7 @@
                 </div>
                 <table>
                     <thead>
+                        <th>STT</th>
                         <th>Phòng</th>
                         <th>Tên người thuê</th>
                         <th>Ngày lập</th>
@@ -143,6 +144,7 @@
                     <tbody>
                         <% for(var i=0;i<hopdong.length;i++){%>
                             <tr>
+                                <td><%=i+1%></td>
                                 <td >
                                     <%=hopdong[i].TenPhong%>
                                 </td>

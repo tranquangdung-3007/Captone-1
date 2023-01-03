@@ -4,7 +4,7 @@ let viewReceipt = async (req, res) => {
     var id = req.params.id;
     connection.query(`SELECT idNhaTro, TenNhaTro FROM nhatro `, function (err, nhatro) {
         if (err) throw err;
-        var sql = "select p.Gia, idHoaDon, NgayLap, h.TrangThai, TenPhong,  p.Gia+h.TienNuoc+ FORMAT((h.ChiSoCuoi-h.ChiSoDau)*2500, 0) as Tongtien from phongtro p inner join hoadon h on p.idPhongTro = h.idPhongTro";
+        var sql = "select p.Gia, idHoaDon, DATE_FORMAT(NgayLap, '%d-%m-%Y') NgayLap, h.TrangThai, TenPhong,  p.Gia+h.TienNuoc+ FORMAT((h.ChiSoCuoi-h.ChiSoDau)*2500, 0) as Tongtien from phongtro p inner join hoadon h on p.idPhongTro = h.idPhongTro";
         connection.query(sql, [id], function (err, hoadon) {
             if (err) throw err;
             res.render("ReceiptManagement.ejs", { nhatro: nhatro, hoadon: hoadon });

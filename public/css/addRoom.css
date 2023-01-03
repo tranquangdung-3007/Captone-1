@@ -178,14 +178,14 @@ small {
   margin-top: 1.4rem;
 }
 
-.container main .date {
-  margin-bottom: 1.0rem;
-  width: 200px;
+main .date {
+  width: 160px;
   display: inline-block;
   background: var(--color-light);
   border-radius: var(--boder-radius-1);
   margin-top: 1rem;
   padding: 0.5rem 1.6rem;
+  text-align: center;
 }
 
 .container main .date input {
@@ -197,10 +197,37 @@ small {
   margin: .8rem 0;
 }
 
-.container main .view-form .recent-orders form {
+main .view-form .recent-orders form {
   background-color: white;
   padding: 40px;
   border-radius: 25px;
+  margin-top: 1.4rem;
+  display: grid;
+}
+
+main .view-form .recent-orders form .form-select {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+main .view-form .recent-orders form .form-select select {
+  width: 30%;
+  margin-left: 30px;
+  padding: 10px 50px;
+  border: 1px solid #cbcccf;
+  border-radius: 5px;
+  outline: none;
+  background-color: #05a06d;
+  color: white;
+}
+
+main .view-form .recent-orders form input {
+  width: 100%;
+  padding: 10px 10px;
+  border: 1px solid #cbcccf;
+  border-radius: 5px;
+  outline: none;
+  margin: 10px 0 30px 0;
 }
 
 .container main .view-form .recent-orders form .text-input {
@@ -208,7 +235,8 @@ small {
   margin-bottom: 60px;
 }
 
-.container main .view-form .recent-orders form .text-input input,.container main .view-form .recent-orders form .text-input select {
+.container main .view-form .recent-orders form .text-input input,
+.container main .view-form .recent-orders form .text-input select {
   display: inline-block;
   width: 800px;
   height: 40px;
@@ -222,7 +250,8 @@ small {
   transition: all 0.1s ease-out;
 }
 
-.container main .view-form .recent-orders form .text-input input:focus+label,.container main .view-form .recent-orders form .text-input select:focus+label {
+.container main .view-form .recent-orders form .text-input input:focus+label,
+.container main .view-form .recent-orders form .text-input select:focus+label {
   -webkit-transform: translateY(-120%) translateX(0%);
   transform: translateY(-120%) translateX(0%);
   border-radius: 3px;
@@ -258,14 +287,29 @@ small {
   transition-delay: 0.2s;
 }
 
-.container main .view-form .recent-orders form button {
+main .view-form .recent-orders form .btn-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+main .view-form .recent-orders form .btn-return {
   padding: 10px;
   width: 100px;
   border-radius: 10px;
-  border: 1px solid black;
   color: white;
   font-weight: 600;
-  background-color: #111e88;
+  background-color: #c0c607;
+  float: left;
+  text-align: center;
+}
+
+main .view-form .recent-orders form button {
+  padding: 10px;
+  width: 100px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  background-color: #05a06d;
   cursor: pointer;
   float: right;
 }

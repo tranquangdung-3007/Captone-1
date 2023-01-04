@@ -117,31 +117,36 @@
                     <h2 class="title">Chỉnh sửa hóa đơn</h2>
                     <form method="POST"
                         action="<%=(typeof editData!='undefined')?'/ReceiptManagement/editReceipt/'+editData.idHoaDon:''%>">
-                        <div class=" text-input">
-                            <input type="date" id="ngaylap"
-                                value="<%=(typeof editData!='undefined')? editData.NgayLap:''%>" name="ngaylap"
-                                placeholder="Nhập ngày lập hóa đơn" required>
-                            <label for="Tennguoithue">Ngày Lập</label>
+
+                        <label for="Tennguoithue">Ngày Lập</label>
+                        <input type="date" id="ngaylap" value="<%=(typeof editData!='undefined')? editData.NgayLap:''%>"
+                            name="ngaylap" placeholder="Nhập ngày lập hóa đơn" required>
+
+
+                        <label for="">Chỉ số đầu</label>
+                        <input type="number" id="chisodau"
+                            value="<%=(typeof editData!='undefined')? editData.ChiSoDau:''%>" name="chisodau"
+                            placeholder="Nhập chỉ số đầu" required>
+
+
+                        <label for="">Chỉ số cuối</label>
+                        <input type="number" id="chisocuoi"
+                            value="<%=(typeof editData!='undefined')? editData.ChiSoCuoi:''%>" name="chisocuoi"
+                            placeholder="Nhập chỉ số cuối" required>
+
+
+                        <label for="">Trạng thái</label>
+                        <input type="text" id="trangthai"
+                            value="<%=(typeof editData!='undefined')? editData.TrangThai:''%>" name="trangthai"
+                            placeholder="Nhập trạng thái" required>
+
+
+                        <div class="btn-form">
+                            <a href="/ReceiptManagement">
+                                <div class="btn-return">Quay lại</div>
+                            </a>
+                            <button type="submit">Lưu </button>
                         </div>
-                        <div class="text-input">
-                            <input type="number" id="chisodau"
-                                value="<%=(typeof editData!='undefined')? editData.ChiSoDau:''%>" name="chisodau"
-                                placeholder="Nhập chỉ số đầu" required>
-                            <label for="">Chỉ số đầu</label>
-                        </div>
-                        <div class="text-input">
-                            <input type="number" id="chisocuoi"
-                                value="<%=(typeof editData!='undefined')? editData.ChiSoCuoi:''%>" name="chisocuoi"
-                                placeholder="Nhập chỉ số cuối" required>
-                            <label for="">Chỉ số cuối</label>
-                        </div>
-                        <div class="text-input">
-                            <input type="text" id="trangthai"
-                                value="<%=(typeof editData!='undefined')? editData.TrangThai:''%>" name="trangthai"
-                                placeholder="Nhập trạng thái" required>
-                            <label for="">Trạng thái</label>
-                        </div>
-                        <button type="submit">Thêm </button>
                     </form>
                 </div>
             </div>

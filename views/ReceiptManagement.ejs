@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,500,0,0" />
-    <link rel="stylesheet" href="/css/managerTenants.css">
+    <link rel="stylesheet" href="/css/manageRoom.css">
     <title>NHÀ TRỌ CỦA TÔI</title>
 </head>
 
@@ -114,20 +114,19 @@
                 <h2>Danh sách hóa đơn</h2>
                 <div class="top-recent">
                     <form action="/ReceiptManagement" method="POST">
-                    <select name="houseID" >
-                        <option value="allHouse">Chọn nhà</option>                           
+                        <select name="houseID">
+                            <option value="allHouse">Chọn nhà</option>
                             <% for(var i=0;i<nhatro.length;i++){%>
-                            <option value="<%=nhatro[i].idNhaTro%>"> 
-                                <%=nhatro[i].TenNhaTro%> 
-                            </option>
-                            <% } %>
-                    </select>
-                    <button type="submit">Tìm</button>
-                </form>
-
+                                <option value="<%=nhatro[i].idNhaTro%>">
+                                    <%=nhatro[i].TenNhaTro%>
+                                </option>
+                                <% } %>
+                        </select>
+                        <button type="submit">Tìm</button>
+                    </form>
                     <a href="/ReceiptManagement/addreceipt">
                         <button class="btn-addhouse">
-                            Thêm hóa đơn
+                            Thêm hóa đơn mới
                         </button>
                     </a>
                 </div>

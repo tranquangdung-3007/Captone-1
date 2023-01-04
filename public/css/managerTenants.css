@@ -474,4 +474,19 @@ small {
   margin: 0;
   width: 100%;
 }
+
+.container main .recent-orders .top-recent form > button {
+  margin-left: 10px;
+  border-radius: 10px;
+  background-color: #05a06d;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+}
+
+.container main .recent-orders .top-recent form > button:hover{
+  background-color: #036c49;
+}
 /*# sourceMappingURL=manageTenants.css.map */

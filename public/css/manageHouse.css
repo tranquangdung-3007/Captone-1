@@ -231,6 +231,22 @@ aside .sidebar .message-count {
     border-radius: var(--boder-radius-1);
 }
 
+aside .sidebar .btn-logout {
+    display: flex;
+    align-items: flex-end;
+}
+
+aside .sidebar .btn-logout button {
+    background-color: transparent;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+aside .sidebar .btn-logout button h3 {
+    color: var(--color-info-dark); 
+    font-size: 1rem;
+}
+
 /* ========MAIN========== */
 main {
     margin-top: 1.4rem;

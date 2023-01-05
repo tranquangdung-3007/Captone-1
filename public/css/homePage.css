@@ -229,8 +229,7 @@ aside .sidebar .btn-logout button {
 }
 
 aside .sidebar .btn-logout button h3 {
-
-    color: var(--color-info-dark);
+    color: var(--color-info-dark); 
     font-size: 1rem;
 }
 

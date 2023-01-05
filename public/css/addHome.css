@@ -142,7 +142,6 @@ aside {
 }
 
 aside .top {
-  background: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -230,6 +229,22 @@ aside .sidebar .message-count {
   padding: 2px 10px;
   font-size: 11px;
   border-radius: var(--boder-radius-1);
+}
+
+aside .sidebar .btn-logout {
+  display: flex;
+  align-items: flex-end;
+}
+
+aside .sidebar .btn-logout button {
+  background-color: transparent;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+aside .sidebar .btn-logout button h3 {
+  color: var(--color-info-dark); 
+  font-size: 1rem;
 }
 
 /* ========MAIN========== */
